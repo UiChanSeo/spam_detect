@@ -1,6 +1,10 @@
 # spam_detect
-  - SPAM을 검출하는 테스트 소스 입니다.
-  - 파이썬으로 작성되었읍니다.
+  - SPAM을 검출하는 테스트 소스입니다.
+  - 이 소스는 "나이브 베이즈"와 "RNN-LSTM"을 이용하여 스팸을 검출합니다.
+  - 파이썬으로 작성되었습니다.
+
+# 사전 설치
+  - pip install -r requirement.txt
 
 # 사용법
   - python main.py [options]
@@ -18,5 +22,5 @@
 # 작성자
 
   - 서의찬
-  - email : 
-  - notion : 
+  - email : uichan@naver.com
+  - notion : https://www.notion.so/ML-67fb5afa8a304e089ac552e421198415
