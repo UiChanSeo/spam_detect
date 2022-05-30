@@ -22,5 +22,5 @@
 # 작성자
 
   - 서의찬
-  - email : uichan@naver.com
+  - email : seouichan@naver.com
   - notion : https://www.notion.so/ML-67fb5afa8a304e089ac552e421198415
