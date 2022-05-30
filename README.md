@@ -16,13 +16,18 @@
   - python main.py [options]
   - options:
     - -h, --help      show this help message and exit
-    - --batch_size=Number
-    - --epochs=Number
+    - --batch_size=Number (지정하지 않을 경우 기본 512)
+    - --epochs=Number (지정하지 않을 경우 기본 20)
     - --test_class LSTMRNN / TBC / TBV
   ----
-    - TBC : 나이브 베이즈 with CountVectorizer 테스트
-    - TBV : 나이브 베이즈 with TfidfVectorizer 테스트
-    - LSTM : RNN-LSTM 테스트
+    - test_class 설명 : 
+      - TBC : 나이브 베이즈 with CountVectorizer 테스트
+      - TBV : 나이브 베이즈 with TfidfVectorizer 테스트
+      - LSTM : RNN-LSTM 테스트
+    
+    - 예시 : 
+      - 나이브 베이즈 : python main.py --test_class=TBC
+      - RNN-LSTM, epochs=10 : python main.py --test_class=LSTMRNN --epochs=10
   ----
 
 # 작성자
