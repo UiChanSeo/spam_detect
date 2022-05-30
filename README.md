@@ -3,8 +3,14 @@
   - 이 소스는 "나이브 베이즈"와 "RNN-LSTM"을 이용하여 스팸을 검출합니다.
   - 파이썬으로 작성되었습니다.
 
-# 사전 설치
-  - pip install -r requirement.txt
+# 사전 설치 및 정보
+  - 파이썬 버젼 및 환경 :
+    - 파이썬 버젼 : 3.10.0
+    - 환경 : virtualenv
+  - 추가 모듈
+    - 추가 모듈은 requirement.txt에 있습니다.
+    - 설치는 다음과 같이 합니다.
+      * pip install -r requirement.txt
 
 # 사용법
   - python main.py [options]
