@@ -1,7 +1,6 @@
 ######################
 # prepare.py
 #
-
 from sklearn.model_selection import train_test_split
 import os
 import glob
@@ -79,7 +78,7 @@ def prepare_data():
     y_test = np.concatenate(([0]*ham_test.shape[0], [1]*spam_test.shape[0]))
 
     # 데이터 썩기 (ham과 spam이 따로 나뉘지 않고 섞이도록 함.
-    # 데이터를 섞는 정도에 따라서 Recall과 Precision에 변동이 있다.
+    # 데이터를 섞는 정도에 따라서 훈련강도가 달라지며, Recall과 Precision에 변동이 있다.
     train_shuffle_index = np.random.permutation(np.arange(0,x_train.shape[0]))
     test_shuffle_index = np.random.permutation(np.arange(0,x_test.shape[0]))
     x_train = x_train[train_shuffle_index]

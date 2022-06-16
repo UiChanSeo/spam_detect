@@ -1,10 +1,10 @@
 ##############################
 # train.py
 #
-
 import matplotlib.pyplot as plt
 from keras.preprocessing.text import Tokenizer
-from keras.layers import Dense, Input, Embedding, Dropout, Activation, Conv1D, LSTM, SimpleRNN
+from keras.layers import Dense, Input, Embedding, Dropout
+from keras.layers import Activation, Conv1D, LSTM, SimpleRNN
 from keras.layers import Bidirectional, GlobalMaxPool1D
 from keras.models import Model, Sequential
 from keras import initializers, regularizers, constraints, optimizers, layers
@@ -19,7 +19,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import GaussianNB
 from sklearn.linear_model import LogisticRegression
 
-
 from plot import draw_plot
 
 
@@ -27,7 +26,6 @@ from plot import draw_plot
 # some config values 
 #
 maxlen = 2000 #max number of words in a question to use
-#max_features = 43142 #how many unique words to use(i.e num rows in embedding vector)
 max_features = 50000 #how many unique words to use(i.e num rows in embedding vector)
 embed_size = 100 #how big is each word vector
 
@@ -104,19 +102,6 @@ def train_rnn(specific_model,
 
     return model, x_test_features
 
-def train_simplernn(x_train ,x_test,
-                   y_train, y_test,
-                   is_model_save: bool = False,
-                   epochs: int = 10,
-                   batch_size=512) -> Model:
-    hidden_units = 32
-    return train_rnn(SimpleRNN(hidden_units),
-                     x_train, x_test,
-                     y_train, y_test,
-                     is_model_save,
-                     True,
-                     epochs,
-                     batch_size)
 
 def train_lstm(x_train ,x_test,
                y_train, y_test,
